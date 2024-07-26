@@ -1,0 +1,94 @@
+/* styles.css */
+.root-template-div{
+  max-width: 1400px;
+  height: 550px;
+  margin: 10px 55px 55px 55px;
+  background-color: #ccc;
+  position: relative;
+  border-radius: 10px;
+}
+
+.form-container {
+  /* overflow-x: none; */
+  width: 700px;
+  height: 400px;
+  margin-top: 2%;
+  margin-left: 23%;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow-y: scroll;
+  position: absolute;
+}
+
+.form-template {
+  padding: 14px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field-row {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.field-row input,
+.field-row select {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.field-row button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.field-row button:hover {
+  background-color: #0056b3;
+}
+
+.add-button {
+  position: absolute;  
+  top: 3px;
+  right: 45px;
+  margin: 6px;
+  padding: 5px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 8px;
+  height: 36px;
+  width: 80px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #218838;
+}
+
+#remove-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#remove-button:hover {
+  background-color: #c82333;
+}
