@@ -1,101 +1,3 @@
-/* 
-.root-template-div{
-  max-width: 1400px;
-  height: 550px;
-  margin: 10px 55px 55px 55px;
-  background-color: #ccccccc2;
-  position: relative;
-  border-radius: 10px;
-  border: 1px solid #929191d7;
-}
-
-.form-container {
-  width: 700px;
-  height: 400px;
-  margin-top: 2%;
-  margin-left: 23%;
-  padding: 30px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  position: relative;
-  overflow-y: scroll;
-  position: absolute;
-  border: 1px solid #929191d7;
-  box-shadow: 1px 2px 3px rgb(0,0,0,0.5);
-}
-
-.form-template {
-  padding: 14px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.field-row {
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.field-row input,
-.field-row select {
-  flex: 1;
-  padding: 10px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.field-row button {
-  padding: 10px 15px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.field-row button:hover {
-  background-color: #0056b3;
-}
-
-.add-button {
-  position: absolute;  
-  top: 3px;
-  right: 45px;
-  margin: 6px;
-  padding: 5px;
-  border: none;
-  background-color: #28a745;
-  color: white;
-  border-radius: 8px;
-  height: 36px;
-  width: 80px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.add-button:hover {
-  background-color: #218838;
-}
-
-#remove-button {
-  padding: 10px 15px;
-  border: none;
-  background-color: #dc3545;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#remove-button:hover {
-  background-color: #c82333;
-}  */
-
-
 /* styles.css */
 
 /* Root div for the template */
@@ -190,7 +92,7 @@
 .submit-button {
   position: sticky; 
   margin: 6px;
-  padding-top: 5  px;
+  padding-top: 5px;
   border: none;
   background-color: #007bff;
   color: white;
@@ -206,11 +108,8 @@
 }
 
 /* Notification form container styling */
+.notification-form-div {}
 
-/* Div inside notification form container */
-.notification-form-div {
-  
-}
 .notification-form-container {
   width: 380px;
   height: 300px;
@@ -289,4 +188,19 @@
 
 .close-button:hover {
   background-color: #c82333;
+}
+
+/* Add spinner styles */
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
