@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div>
-        <h1 id="heading-h1">Template Generator</h1>
+        <h1 id="heading-h1">Create Template</h1>
         <DynamicForm></DynamicForm>
       </div>
     

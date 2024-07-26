@@ -1,15 +1,15 @@
-/* styles.css */
+/* 
 .root-template-div{
   max-width: 1400px;
   height: 550px;
   margin: 10px 55px 55px 55px;
-  background-color: #ccc;
+  background-color: #ccccccc2;
   position: relative;
   border-radius: 10px;
+  border: 1px solid #929191d7;
 }
 
 .form-container {
-  /* overflow-x: none; */
   width: 700px;
   height: 400px;
   margin-top: 2%;
@@ -21,6 +21,8 @@
   position: relative;
   overflow-y: scroll;
   position: absolute;
+  border: 1px solid #929191d7;
+  box-shadow: 1px 2px 3px rgb(0,0,0,0.5);
 }
 
 .form-template {
@@ -90,5 +92,201 @@
 }
 
 #remove-button:hover {
+  background-color: #c82333;
+}  */
+
+
+/* styles.css */
+
+/* Root div for the template */
+.root-template-div {
+  max-width: 1400px;
+  height: 550px;
+  margin: 10px 55px 55px 55px;
+  background-color: #ccccccc2;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #929191d7;
+}
+
+/* Container for the dynamic form */
+.form-container {
+  width: 700px;
+  height: 400px;
+  margin-top: 2%;
+  margin-left: 23%;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow-y: scroll;
+  position: absolute;
+  border: 1px solid #929191d7;
+  box-shadow: 1px 2px 3px rgb(0, 0, 0, 0.5);
+}
+
+/* Form template styling */
+.form-template {
+  padding: 14px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Row styling for each field */
+.field-row {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Input and select styling within each row */
+.field-row input,
+.field-row select {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Remove button styling */
+#remove-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#remove-button:hover {
+  background-color: #c82333;
+}
+
+/* Add button styling */
+.add-button {
+  position: sticky;
+  top: 10px;
+  margin: 6px;
+  padding: 5px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 8px;
+  height: 36px;
+  width: 80px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #218838;
+}
+
+/* Submit button styling */
+.submit-button {
+  position: sticky; 
+  margin: 6px;
+  padding-top: 5  px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  height: 36px;
+  width: 80px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Notification form container styling */
+
+/* Div inside notification form container */
+.notification-form-div {
+  
+}
+.notification-form-container {
+  width: 380px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 1px solid #929191d7;
+  box-shadow: 1px 2px 3px rgb(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 40px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* backdrop-filter: blur(5px); */
+}
+
+/* Notification form styling */
+.notification-form {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  margin-bottom: 15px;
+}
+
+.form-row label {
+  margin-bottom: 10px;
+  display: block;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+  font-weight: 500;
+}
+
+.form-row input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #161617;
+  font-size: 14px;
+}
+
+/* Final submit button styling */
+.final-submit-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: center;
+  font-size: 15px;
+}
+
+.final-submit-button:hover {
+  background-color: #218838;
+}
+
+/* Close button styling */
+.close-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.close-button:hover {
   background-color: #c82333;
 }
