@@ -4,10 +4,9 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const DynamicForm = () => {
-
   const [fields, setFields] = useState([
-    { type: "input", label: "Fullname", value: "fullName", selectValue: "Text(String)",readOnly:true },
-    { type: "input", label: "Address", value: "Address", selectValue: "Text(String)",readOnly:true },
+    { type: "input", label: "Fullname", value: "fullName", selectValue: "Text(String)", readOnly: true, required: true },
+    { type: "input", label: "Address", value: "Address", selectValue: "Text(String)", readOnly: true, required: true },
   ]);
 
   const [showNotificationForm, setShowNotificationForm] = useState(false);
@@ -21,7 +20,7 @@ const DynamicForm = () => {
   const handleAddField = () => {
     setFields([
       ...fields,
-      { type: "input", label: "", value: "", selectValue: "", readOnly: false},
+      { type: "input", label: "", value: "", selectValue: "", readOnly: false, required: true },
     ]);
   };
 
@@ -41,8 +40,24 @@ const DynamicForm = () => {
     setFields(fields.filter((_, i) => i !== index));
   };
 
+  const validateFields = () => {
+    for (let field of fields) {
+      if (!field.value || !field.selectValue) {
+        return false;
+      }
+    }
+    return true;
+  };
+
   const handleInitialSubmit = () => {
-    setShowNotificationForm(true);
+    if (validateFields()) {
+      setShowNotificationForm(true);
+    } else {
+      toast.error("Please fill out all fields before submitting...", {
+        position: "top-center",
+        autoClose: 3000,
+      });
+    }
   };
 
   const handleNotificationFormChange = (e) => {
@@ -83,22 +98,17 @@ const DynamicForm = () => {
           position: "top-center",
           autoClose: 5000,
         });
-        // Handle successful response
         console.log("Form template saved successfully");
-      } 
-      else {
-        toast.error("Failed! to Create Template, Try Again", {
+      } else {
+        toast.error("Failed to Create Template, Try Again", {
           position: "top-center",
           autoClose: 3000,
         });
-        // Handle errors
         console.error("Error saving form template");
       }
-    } 
-    catch (error) {
+    } catch (error) {
       console.error("Error:", error);
-    } 
-    finally {
+    } finally {
       setIsLoading(false);
       setShowNotificationForm(false);
     }
@@ -117,10 +127,12 @@ const DynamicForm = () => {
                 value={field.value}
                 onChange={(e) => handleInputChange(index, e.target.value)}
                 readOnly={field.readOnly}
+                required={field.required}
               />
               <select
                 value={field.selectValue}
                 onChange={(e) => handleSelectChange(index, e.target.value)}
+                required={field.required}
               >
                 <option value="">Select Field Type</option>
                 <option value="Text(String)">Text(String)</option>
@@ -145,7 +157,6 @@ const DynamicForm = () => {
           +
         </button>
 
-        {/* Submit button to show the notification form */}
         <button
           type="button"
           onClick={handleInitialSubmit}
@@ -155,7 +166,6 @@ const DynamicForm = () => {
         </button>
       </div>
 
-      {/* Notification form container */}
       {showNotificationForm && (
         <div className="notification-form-overlay">
           <div className="notification-form-container">
@@ -167,7 +177,8 @@ const DynamicForm = () => {
                   name="formName"
                   value={notificationFormData.formName}
                   onChange={handleNotificationFormChange}
-                  required
+                  required={true}
+                  placeholder="Organization Name"
                 />
               </div>
 
@@ -178,7 +189,7 @@ const DynamicForm = () => {
                   name="createdAt"
                   value={notificationFormData.createdAt}
                   onChange={handleNotificationFormChange}
-                  required
+                  required={true}
                 />
               </div>
 
@@ -189,23 +200,24 @@ const DynamicForm = () => {
                   name="userName"
                   value={notificationFormData.userName}
                   onChange={handleNotificationFormChange}
-                  required
+                  required={true}
+                  placeholder="Enter Your Username"
                 />
               </div>
 
               <button
-              type="submit"
-              className="final-submit-button"
-            >
-              {isLoading ? <div className="spinner"></div> : "Submit"}
-            </button>
-            <button
-              type="button"
-              className="close-button"
-              onClick={() => setShowNotificationForm(false)}
-            >
-              Close
-            </button>
+                type="submit"
+                className="final-submit-button"
+              >
+                {isLoading ? <div className="spinner"></div> : "Final Submit"}
+              </button>
+              <button
+                type="button"
+                className="close-button"
+                onClick={() => setShowNotificationForm(false)}
+              >
+                Close
+              </button>
             </form>
           </div>
         </div>

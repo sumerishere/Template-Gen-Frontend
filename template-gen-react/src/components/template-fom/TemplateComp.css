@@ -161,6 +161,8 @@
 
 /* Final submit button styling */
 .final-submit-button {
+  margin-top: 20px;
+  margin-bottom: 8px;
   padding: 10px 20px;
   border: none;
   background-color: #28a745;
@@ -169,6 +171,7 @@
   cursor: pointer;
   align-self: center;
   font-size: 15px;
+  height: 40px;
 }
 
 .final-submit-button:hover {
@@ -184,6 +187,8 @@
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
+  width: 300px;
+  margin-left: 40px;
 }
 
 .close-button:hover {
@@ -197,7 +202,7 @@
   border-radius: 50%;
   width: 24px;
   height: 24px;
-  animation: spin 1s linear infinite;
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
