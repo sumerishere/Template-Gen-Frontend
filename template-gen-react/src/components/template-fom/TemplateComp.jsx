@@ -117,6 +117,9 @@ const DynamicForm = () => {
   return (
     <div className="root-template-div">
       <ToastContainer />
+      <div>
+          <p id="note-id">{`Important note : "Once you create template it will be considerd as permanently so check carefully once before submitting form."`}</p>
+      </div>
       <div className="form-container">
         <form className="form-template">
           {fields.map((field, index) => (
