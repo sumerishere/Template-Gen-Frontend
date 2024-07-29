@@ -35,7 +35,7 @@ const TemplateCreated = () => {
   }, [username]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div id="loading-id">Loading...</div>;
   }
 
   if (templateData.length === 0) {

@@ -24,7 +24,7 @@ const LoginComponent = () => {
       if (response.ok) {
         // const data = await response.json();
         navigate("/DynamicForm", { state: { username } }); // Replace with your actual route to DynamicForm component
-      } else {
+      } else { 
         const errorMessage = await response.text();
         toast.error(errorMessage, {
           position: "top-center",
