@@ -2,10 +2,18 @@ import "./TemplateComp.css";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
+
 
 const DynamicForm = () => {
+
+  const location = useLocation();
+  // const navigate = useNavigate();
+  const username = location.state?.username || '';
+
+
   const [fields, setFields] = useState([
     {
       type: "input",
@@ -151,7 +159,7 @@ const DynamicForm = () => {
 
         <div className="check-template-btn-div">
           <button id="check-template-btn">
-            <Link to="/TemplateCreated" style={{textDecoration:"none",color:"white"}} >Check Template</Link>
+            <Link to="/TemplateCreated" state={{username}} style={{textDecoration:"none",color:"white"}} >Check Template</Link>
           </button>
         </div>
 

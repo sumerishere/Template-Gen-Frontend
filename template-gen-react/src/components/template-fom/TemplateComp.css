@@ -47,7 +47,7 @@
 }
 
 #note-id{
-  color: white;
+  color: black;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-top: 6px;
   padding-left: 50px;
@@ -55,17 +55,17 @@
   margin-top: 12px;
   font-weight: 550;
   font-size: 14px;
-  background-color: #b72438;
-  border: 1px solid rgb(205, 205, 205);
+  /* background-color: #cd2e43; */
+  /* border: 1px solid rgb(205, 205, 205); */
   border-radius: 5px;
-  text-shadow: 1px 2px 3px rgb(0,0,0,0.5);
+  /* text-shadow: 1px 2px 3px rgb(0,0,0,0.5); */
 }
 
 /* Container for the dynamic form */
 .form-container {
   width: 700px;
   height: 420px;
-  margin-top: 1%;
+  margin-top: -0.5%;
   margin-left: 23%;
   padding: 30px;
   border: 1px solid #ddd;
