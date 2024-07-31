@@ -188,6 +188,9 @@ const DynamicForm = () => {
                   </option>
                   <option value="Image">Image</option>
                   <option value="Pdf File">Pdf File</option>
+                  <option value="Yes/No check(checkbox)">
+                  Yes/No check(checkbox)
+                  </option>
                 </select>
                 {index >= 2 && (
                   <button
