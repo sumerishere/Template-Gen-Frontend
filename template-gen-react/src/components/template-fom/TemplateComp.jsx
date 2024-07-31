@@ -17,8 +17,8 @@ const DynamicForm = () => {
   const [fields, setFields] = useState([
     {
       type: "input",
-      label: "Fullname",
-      value: "fullName",
+      label: "Full Name",
+      value: "Full Name",
       selectValue: "Text(String)",
       readOnly: true,
       required: true,
@@ -97,6 +97,12 @@ const DynamicForm = () => {
       ...notificationFormData,
       [name]: value,
     });
+  };
+
+  // Get the current date and time in the format required by the datetime-local input
+  const getCurrentDateTime = () => {
+    const now = new Date();
+    return now.toISOString().slice(0, 16);
   };
 
   const handleFinalSubmit = async (e) => {
@@ -240,6 +246,7 @@ const DynamicForm = () => {
                     name="createdAt"
                     value={notificationFormData.createdAt}
                     onChange={handleNotificationFormChange}
+                    min={getCurrentDateTime()} 
                     required={true}
                   />
                 </div>

@@ -111,7 +111,7 @@ const TemplateCreated = () => {
                 <div>
                   <label id="label-pdf">
                     <input
-                      style={{border:"1px solid grey"}}
+                      style={{border:"1px solid grey" ,borderRadius:"3px"}}
                       id="pdf-input"
                       type="file"
                       accept="application/pdf"
