@@ -82,16 +82,32 @@
   margin-top: 5px;
   margin-left: 15px;
   cursor: pointer;
+  /* margin-top: 10px;
+  margin-left: 14px; */
+  display: inline-flex;
+  flex-direction: row-reverse;
 }
 
+input{
+  cursor: pointer;
+}
+
+
 #label-radio-1{
-  margin-top: 14px;
+  margin-top: 10px;
   display: inline-flex;
   flex-direction: row-reverse;
 }
 
 #label-radio-2{
   margin-left: 20px;
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+
+#checkbox-input{
+  margin-top: 10px;
+  margin-left: 14px;
   display: inline-flex;
   flex-direction: row-reverse;
 }

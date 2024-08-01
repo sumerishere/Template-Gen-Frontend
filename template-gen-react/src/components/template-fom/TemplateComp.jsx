@@ -137,13 +137,18 @@ const DynamicForm = () => {
         });
         console.log("Form template saved successfully");
       } else {
-        toast.error("Failed to Create Template, Try Again", {
+        const errorMessage = await response.text();
+        toast.error(errorMessage, {
           position: "top-center",
           autoClose: 3000,
         });
         console.error("Error saving form template");
       }
     } catch (error) {
+      toast.error(error, {
+        position: "top-center",
+        autoClose: 3000,
+      });
       console.error("Error:", error);
     } finally {
       setIsLoading(false);
