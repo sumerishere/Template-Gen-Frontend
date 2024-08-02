@@ -199,7 +199,10 @@ const TemplateCreated = () => {
   if (templateData.length === 0) {
     return (
       <div className="empty-text-div">
+        <img className="bg-template-img" src="./public/images/data-8873303_1920.png" alt="" />
         <p id="empty-text">Template not created yet. 🥲</p>
+        <p id="alert-emoji">⚠️</p>
+        <p id="empty-template-note">{`Note :" First you will have to create your own template form then you will able to see your template form here."`}</p>
       </div>
     );
   }
