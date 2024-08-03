@@ -166,6 +166,7 @@ import { useLocation } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import "../created-templates/CreatedTemplate.css";
+import { Link } from "react-router-dom";
 
 const TemplateCreated = () => {
   const location = useLocation();
@@ -274,6 +275,8 @@ const TemplateCreated = () => {
   if (templateData.length === 0) {
     return (
       <div className="empty-text-div">
+
+
         <img className="bg-template-img" src="/images/data-8873303_1920.png" alt="" />
         <p id="empty-text">Template not created yet. 🥲</p>
         <p id="alert-emoji">⚠️</p>
@@ -289,6 +292,15 @@ const TemplateCreated = () => {
     <div className="createdTemplate-root-div">
       <ToastContainer />
       <h1 id="createdTemplate-h1">Your Created Template</h1>
+
+      <div className="data-table">
+          <p>
+           <Link to="/DataTableComp">
+              <button id="check-data-id">check table</button> 
+           </Link> 
+          </p>
+      </div>
+
       <div className="form-div-container">
         <form className="created-template-form" onSubmit={handleSubmit}>
           {fields.map((field, index) => (

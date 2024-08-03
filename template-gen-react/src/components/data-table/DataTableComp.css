@@ -1,0 +1,14 @@
+
+.data-table-child{
+  height: 500px;
+  width: 70%;
+  margin-top: 5%;
+  margin-left: 15%;
+  border-radius: 10px;
+  border: 1px solid grey;
+  background-color: antiquewhite;
+}
+
+#data-table-h1{
+  text-align: center;
+}
